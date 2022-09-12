@@ -50,7 +50,7 @@ class QrCodeBlock extends BlockBase {
     $writer = new PngWriter();
 
     // Create QR code
-    $qrCode = QrCode::create('Data')
+    $qrCode = QrCode::create($current_path)
       ->setEncoding(new Encoding('UTF-8'))
       ->setErrorCorrectionLevel(new ErrorCorrectionLevelLow())
       ->setSize(300)
