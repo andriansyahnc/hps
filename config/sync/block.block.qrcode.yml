@@ -1,0 +1,28 @@
+uuid: 5c9b28b1-46e4-4424-ace2-99ec2f63dc65
+langcode: en
+status: true
+dependencies:
+  module:
+    - jugaad_portal
+    - node
+  theme:
+    - olivero
+id: qrcode
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: jugaad_portal_qr_code
+settings:
+  id: jugaad_portal_qr_code
+  label: 'QR Code'
+  label_display: '0'
+  provider: jugaad_portal
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      product: product

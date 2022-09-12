@@ -30,25 +30,6 @@ class QrCodeBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function blockForm($form, FormStateInterface $form_state) {
-    $form['foo'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Foo'),
-      '#default_value' => $this->configuration['foo'],
-    ];
-    return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function blockSubmit($form, FormStateInterface $form_state) {
-    $this->configuration['foo'] = $form_state->getValue('foo');
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function build() {
     $build['content'] = [
       '#markup' => $this->t('It works!'),
