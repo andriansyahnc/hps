@@ -1,0 +1,7 @@
+name: Jugaad Portal
+type: module
+description: Provides additional functionality for the portal
+package: sph
+core_version_requirement: ^9 || ^10
+dependencies:
+  - node

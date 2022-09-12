@@ -1,0 +1,22 @@
+uuid: e2b984cd-d887-41d9-8ee8-a814780e7068
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - jugaad_portal
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: npgd1jyHo1YSZcYg9OjV2u7AfJDlhIx6FbeG_ZvHXMg
+name: Product
+type: product
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
