@@ -41,13 +41,15 @@ class QrCodeBlock extends BlockBase {
   public function build() {
     $host = \Drupal::request()->getSchemeAndHttpHost();
     $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')
+      ->getAliasByPath($current_path);
     $file_path = \Drupal::service('file_url_generator')
       ->generate('public://qrcode.png');
 
     $writer = new PngWriter();
 
     // Create QR code
-    $qrCode = QrCode::create($host . $current_path)
+    $qrCode = QrCode::create($host . $current_path_alias)
       ->setEncoding(new Encoding('UTF-8'))
       ->setErrorCorrectionLevel(new ErrorCorrectionLevelLow())
       ->setSize(300)
