@@ -1,0 +1,7 @@
+block.settings.jugaad_portal_qr_code:
+  type: block_settings
+  label: 'QR Code block'
+  mapping:
+    foo:
+      type: string
+      label: Foo

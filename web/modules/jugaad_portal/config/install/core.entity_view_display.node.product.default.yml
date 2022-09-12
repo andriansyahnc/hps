@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.product.body
-    - field.field.node.product.field_image
     - node.type.product
   module:
     - image
@@ -20,17 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_image:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

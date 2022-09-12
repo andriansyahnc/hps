@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\node\NodeInterface;
+use Drupal\path_alias\Entity\PathAlias;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function jugaad_portal_node_insert(NodeInterface $node) {
+  if($node->getType() !== 'product') {
+     return;
+  }
+  $path_alias = PathAlias::create([
+    'path' => '/node/' . $node->id(),
+    'alias' => '/product/' . Html::getClass($node->getTitle())
+  ]);
+  $path_alias->save();
+}

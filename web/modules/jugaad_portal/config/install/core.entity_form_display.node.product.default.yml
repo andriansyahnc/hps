@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.product.body
-    - field.field.node.product.field_image
     - image.style.thumbnail
     - node.type.product
   module:
@@ -30,14 +29,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 122
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   path:
     type: path
